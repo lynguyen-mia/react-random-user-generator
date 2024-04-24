@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: #343a40;
+}
+
+.pagination li {
+  color: #343a40;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination .active {
+  background-color: #495057;
+  color: white;
+}
+
+#user-table {
+  max-width: 600px;
+}
+
+#user-table th {
+  padding: 0.5rem;
+  overflow-wrap: break-word;
+}
+
+#user-table td {
+  padding: 0.5rem 2rem;
+  overflow-wrap: break-word;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 500px) {
+  .pagination li {
+    font-size: 14px;
+    max-width: 20px;
+  }
+
+  #user-table {
+    width: 350px !important;
+    min-width: 350px;
+    overflow: scroll;
+  }
+
+  #user-table .table th,
+  #user-table .table td {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
