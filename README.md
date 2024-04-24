@@ -1,5 +1,6 @@
-# RANDOM USER GENERATOR PROJET
+# RANDOM USER GENERATOR PROJECT
 
+## Introduction
 This project demonstrates a React application that displays user data with pagination, allowing users to navigate through a maximum of 100 users with 10 users displayed per page. It utilizes React, React Router DOM, Redux, and Bootstrap.
 
 ## Getting Started
