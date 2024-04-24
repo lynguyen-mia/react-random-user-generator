@@ -7,7 +7,7 @@ This project demonstrates a React application that displays user data with pagin
 1. Prerequisites
 Node.js and npm installed on your system.
 
-3. Clone the Repository
+2. Clone the Repository
 ```
 git clone https://github.com/lynguyen-mia/react-random-user-generator.git
 ```
