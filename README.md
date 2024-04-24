@@ -4,7 +4,10 @@ This project demonstrates a React application that displays user data with pagin
 
 ## Getting Started
 
-1. Clone the Repository
+1. Prerequisites:
+Node.js and npm installed on your system.
+
+2. Clone the Repository
 ```
 git clone https://github.com/lynguyen-mia/react-random-user-generator.git
 ```
@@ -13,8 +16,8 @@ git clone https://github.com/lynguyen-mia/react-random-user-generator.git
 cd react-random-user-generator
 npm install
 ```
-3. Run the Application
-This will start the development server and open the application in your default browser, typically at http://localhost:3000/.
+4. Run the Application
+This will start the development server and open the application in your default browser, typically at `http://localhost:3000`.
 ```
 npm start
 ```
