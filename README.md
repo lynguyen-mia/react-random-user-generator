@@ -35,7 +35,7 @@ npm start
 - React Router DOM: Enables routing for navigation within the application.
 - Redux: State management library for managing application state.
 - Bootstrap: CSS framework for responsive design and common UI components.
-- Third-party API: Data fetched from a thid-party API: https://randomuser.me/api
+- Data: Data fetched from a third-party API: https://randomuser.me/api
 
 ## Features
 
