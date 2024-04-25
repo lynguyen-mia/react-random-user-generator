@@ -9,8 +9,6 @@ This React application fetches and displays details of random users with paginat
 - Navigating through user data using 10 pagination buttons, which allows to display a maximum of 100 users.
 - Displaying 10 random users per page.
 - Sorting users ascendingly or descendingly based on fullname or username
-- Useing Redux to manage application state for users and pagination information.
-- Employing Bootstrap for responsive table layout and styling.
 
 ## Getting Started
 
@@ -41,6 +39,6 @@ npm start
 
 - React: JavaScript library for building user interfaces.
 - React Router DOM: Enables routing for navigation within the application.
-- Redux: State management library for managing application state.
-- Bootstrap: CSS framework for responsive design and common UI components.
+- Redux: State management library for managing application state and pagination information.
+- Bootstrap: CSS framework for responsive table layout and styling.
 - Data: Data fetched from a third-party API: https://randomuser.me/api
