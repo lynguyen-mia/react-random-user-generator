@@ -40,5 +40,11 @@ npm start
 - React: JavaScript library for building user interfaces.
 - React Router DOM: Enables routing for navigation within the application.
 - Redux: State management library for managing application state and pagination information.
+- React Redux: Javascript library that simplifies connecting React components to Redux
 - Bootstrap: CSS framework for responsive table layout and styling.
 - Data: Data fetched from a third-party API: https://randomuser.me/api
+
+## Customization
+
+- Modify the API endpoint URL in home.js to fetch user data in a customized way.
+- Modify totalPage, userPerPage states in centralized store to adjust the number of pagination buttons and users displaying per page.

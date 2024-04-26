@@ -5,8 +5,8 @@ const initialState = {
   curPage: 1,
   totalPage: 10,
   userPerPage: 10,
-  sortBy: "fullname",
-  sortDirection: "ascending"
+  sortBy: "Sort By",
+  sortDirection: "Sort Direction"
 };
 
 const userReducer = (state = initialState, action) => {

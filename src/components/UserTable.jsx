@@ -1,7 +1,39 @@
 import { useSelector } from "react-redux";
+import { useMemo } from "react";
 
 const UserTable = () => {
   const userList = useSelector((state) => state.userList);
+  const sortBy = useSelector((state) => state.sortBy);
+  const sortDirection = useSelector((state) => state.sortDirection);
+
+  function compareFullname(a, b) {
+    const fullnameA = a.name.first + a.name.last;
+    const fullnameB = b.name.first + b.last;
+    return fullnameA.localeCompare(fullnameB);
+  }
+
+  function compareUsername(a, b) {
+    return a.login.username.localeCompare(b.login.username);
+  }
+
+  function sortUserList(userList, sortBy, sortDirection) {
+    const sortFunction =
+      sortBy === "fullname" ? compareFullname : compareUsername;
+    // create a copy of userList before sorting so we can easily go back to userList in case of no sorting
+    const sortedUserList = [...userList];
+    return sortedUserList.sort((a, b) => {
+      return sortDirection === "ascending"
+        ? sortFunction(a, b)
+        : sortFunction(b, a);
+    });
+  }
+
+  const sortedUserList = useMemo(() => {
+    if (sortBy !== "Sort By" && sortDirection !== "Sort Direction") {
+      return sortUserList(userList, sortBy, sortDirection);
+    }
+    return userList; // Default to original userList if not sorting
+  }, [userList, sortBy, sortDirection]);
 
   return (
     <div className="container">
@@ -16,21 +48,21 @@ const UserTable = () => {
           </thead>
 
           <tbody>
-            {!userList && (
+            {!sortedUserList && (
               <tr className="text-center mt-3">
                 <td colSpan="12">"Something went wrong!"</td>
               </tr>
             )}
 
-            {userList && userList.length === 0 && (
+            {sortedUserList && sortedUserList.length === 0 && (
               <tr className="text-center mt-3">
                 <td colSpan="12">"No user found"</td>
               </tr>
             )}
 
-            {userList &&
-              userList.length > 0 &&
-              userList.map((user) => (
+            {sortedUserList &&
+              sortedUserList.length > 0 &&
+              sortedUserList.map((user) => (
                 <tr key={user.login.uuid}>
                   <td>
                     {user.name.title + " " + user.name.first + user.name.last}
