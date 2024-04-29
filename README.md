@@ -13,7 +13,7 @@ This React application fetches and displays details of random users with paginat
 ## Getting Started
 
 1. Prerequisites:
-   Node.js and npm installed on your system.
+   Npm installed on your system.
 
 2. Clone the Repository:
 
